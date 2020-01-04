@@ -14,10 +14,11 @@ for f in os.listdir():
     f_hora = f_hora.strip()
 
     f_fecha = f_fecha[0:4]+"-"+f_fecha[4:6]+"-"+f_fecha[6:8]
-
     f_hora = f_hora[0:2]+"."+f_hora[2:4]+"."+f_hora[4:6]
 
-    print('{} {}{}'.format(f_fecha,f_hora,f_ext))
+    f_nombre = '{} {}{}'.format(f_fecha,f_hora,f_ext)
+
+    os.rename(f,f_nombre)
 
 
 
